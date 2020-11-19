@@ -23,21 +23,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button = findViewById<Button>(R.id.btn)
-        //val device = Device("15","2","4","d","d","d",12,"d","d","d")
-        //val nameApp = NotificationApp("das","das","ds","ds")
-//        val post = Posted("d",",","d",1,1,1,"d",
-//                "d","d",1,1,1,1,1,1,1,"1","1",1,"d","d"
-//                ,"d","d","d","d",1,"d",1,"d","d" +
-//                "","d","d","d","d","d","d","d",1,"d","d","d","d","d","d","d")
+
+        val notificationLog = NotificationLog("das","ds","d","d")
         button.setOnClickListener {
             lifecycleScope.launch(Dispatchers.IO){
-//                val check = APIRequest.postNotification(post)
-//                Log.d("check", check.toString())
+                APIRequest.postNotification(notificationLog)
             }
         }
     }
 }
-
-/*
-* ~/AndroidStudioProjects/Notification Logs/Server$ json-server --host 192.168.98.105 --port 3006 Notification_Logs.json
-* */
