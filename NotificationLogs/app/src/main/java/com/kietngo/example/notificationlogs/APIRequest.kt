@@ -2,10 +2,7 @@ package com.kietngo.example.notificationlogs
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.kietngo.example.notificationlogs.model.Device
-import com.kietngo.example.notificationlogs.model.NotificationApp
 import com.kietngo.example.notificationlogs.model.NotificationLog
-import com.kietngo.example.notificationlogs.model.Posted
 import okhttp3.*
 
 
