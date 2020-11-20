@@ -1,10 +1,13 @@
 package com.kietngo.example.notificationlogs.repository
 
 import android.content.Context
+import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.kietngo.example.notificationlogs.repository.model.NotificationDB
 
+@Database(entities = [NotificationDB::class], version = 1)
 
 abstract class AppDatabase : RoomDatabase() {
     abstract fun notificationDao(): NotificationDao
@@ -39,7 +42,7 @@ abstract class AppDatabase : RoomDatabase() {
             override fun onOpen(db: SupportSQLiteDatabase) {
                 super.onOpen(db)
                 INSTANCE?.let{database ->
-                    //TODO:
+                    //TODO: khoi tao them value
                 }
             }
         }
