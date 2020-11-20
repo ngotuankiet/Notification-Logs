@@ -1,6 +1,7 @@
 package com.kietngo.example.notificationlogs.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class NotificationLog(
     @SerializedName("app_bundle")
@@ -11,4 +12,4 @@ data class NotificationLog(
     val title: String,
     @SerializedName("content")
     val content: String
-)
+): Serializable

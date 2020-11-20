@@ -1,6 +1,7 @@
 package com.kietngo.example.notificationlogs.repository.model
 
 import androidx.room.*
+import java.io.Serializable
 
 @Entity(tableName = "TABLE_NOTIFICATION")
 data class NotificationDB(
@@ -10,4 +11,4 @@ data class NotificationDB(
     @ColumnInfo(name ="title") val title: String,
     @ColumnInfo(name = "content") val content: String,
     @ColumnInfo(name = "app_name") val appName: String
-)
+): Serializable
